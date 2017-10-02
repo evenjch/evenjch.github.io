@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box; 
+}
+body {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+h1,h2,h3, h4, h5 {
+	background-color; black;
+	color:rgb(45,116,181);
+}
+.col-1 {
+	padding-top:300px;
+	background-image: url("content/testheader.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+	flex: 1;
+}
+.col-2 {
+	display: flex;
+	flex-direction: column;
+	flex: 5;
+	max-width:80vw;
+}
+.content {
+	background: white;
+	display: flex;
+	flex-direction: row;
+	max-width:80vw;
+}
+.content > article {
+	flex: 4;
+	min-height: 84vh;
+	padding:0;
+}
+.content > aside {
+	background: white;
+	border: solid 1px;
+	flex: 1;
+	max-width: 20vw;
+	min-width: 20vw;
+	max-height: 500px;
+}
+header {
+	background: white;
+	height: 6vh;
+	width: 75vw;
+}
+footer {
+	background: white;
+	height: 6vh;
+	max-height: 6vh;
+	min-height: 6vh;
+	width: 75vw;
+	padding:0;
+}
+header, footer, article, nav, aside {
+	padding: 1em;
+}
+nav {
+	max-width:20vw;
+	min-width:20vw;
+}
+
+#log {
+	width:45vw;
+}
+
+.logo > img {
+	overflow: hidden;
+	width: 15vw;
+	display:block;
+	margin:-30 0 0 -30;
+	padding: 0 0 30 0;
+}
+
+button.accordion {
+    background-color: white;
+    color: #454545;
+    cursor: pointer;
+    padding: 5 5 0 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: white; 
+}
+
+
+div.items {
+    display: none;
+    background-color: white;
+}
+
+.items > p {    
+	color: #606060;
+	padding: 5 0 0 20;
+	margin:0;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;border:none;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}

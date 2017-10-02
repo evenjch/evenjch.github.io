@@ -1,0 +1,4 @@
+let startside = `
+		<p> <h2 style="color:#CCCCCC">Evens Wiki</h2></p>
+		<p>Midlertidige greier</p>
+`;

@@ -1,0 +1,161 @@
+﻿let forprosjekt555 = `
+	<p id="Astabil555krets"> <h3>Forprosjekt - Astabil 555-krets </h3></p>
+	<p> Formålet med dette prosjektet er å bli kjent med arbeidsflyten i programmene Multisim og
+	Ultiboard, ofte omtalt som NI Circuit Design Suite. Studenten skal i løpet av forprosjektet gjennom
+	alle nødvendige steg for produksjon av kretskort. Dette gjør vi for å kunne realisere EKG-kretsen med
+	mer selvsikkerhet i arbeidsflyten.</p>
+	<img src="content/astabil555.PNG">
+	<ol>
+		<li>Lage footprints i Ultiboard</li>
+		<li>Lage nødvendige symboler i Multisim (LM555 og HDR, 1X2 pinheaderen)</li>
+		<li>Koble opp krets i Multisim</li>
+		<li>Utlegg i Ultiboard</li>
+	</ol>
+
+	<table class="tg">
+	  <tr>
+		<th class="tg-9hbo" colspan="4"><p id="bom"><h3>Bill of Materials</h3></p></th>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">R1</td>
+		<td class="tg-yw4l">SMD 0805</td>
+		<td class="tg-yw4l">1kΩ</td>
+		<td class="tg-yw4l"></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">R2</td>
+		<td class="tg-yw4l">SMD 0805</td>
+		<td class="tg-yw4l">10kΩ</td>
+		<td class="tg-yw4l"></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">R3</td>
+		<td class="tg-yw4l">SMD 0805</td>
+		<td class="tg-yw4l">1kΩ</td>
+		<td class="tg-yw4l"></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">C1</td>
+		<td class="tg-yw4l">THT Electrolyte</td>
+		<td class="tg-yw4l">120uF</td>
+		<td class="tg-yw4l"><a href="http://www.farnell.com/datasheets/1897635.pdf">http://www.farnell.com/datasheets/1897635.pdf</a></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">C2</td>
+		<td class="tg-yw4l">SMD 0805</td>
+		<td class="tg-yw4l">10nF</td>
+		<td class="tg-yw4l"></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">LED1</td>
+		<td class="tg-yw4l" colspan="2">SMD 0805</td>
+		<td class="tg-yw4l"></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">LM555</td>
+		<td class="tg-yw4l" colspan="2">SOIC</td>
+		<td class="tg-yw4l"><a href="http://www.ti.com/lit/ds/symlink/lm555.pdf">http://www.ti.com/lit/ds/symlink/lm555.pdf</a></td>
+	  </tr>
+	  <tr>
+		<td class="tg-yw4l">HDR 1x2</td>
+		<td class="tg-yw4l" colspan="2">2.54mm mellom ben<br>1mm diameter på ben</td>
+		<td class="tg-yw4l"><a href="srchttp://no.farnell.com/amp-te-connectivity/640456-2/header-vertical-0-1-2way/dp/588570">http://no.farnell.com/amp-te-connectivity/640456-2/header-vertical-0-1-2way/dp/588570</a></td>
+	  </tr>
+	</table>
+	<p id="kopiering_av_eksisterende"> <h3>Kopiering av eksisterende footprints</h3></p>
+	<ol>
+		<li>Åpne Ultiboard og start en nytt prosjekt (dersom det ikke er et åpent)</li>
+		<li>Gå på Tools > Database > Database Manager</li>
+		<li>Finn ønsket footprint under Master Database.</li>
+		<p>Eksempel:</p>
+		<img src="content/ultiboard_kopiering.png">
+		<li>Høyreklikk og velg Copy…</li>
+		<li>Lagre kopi i User Database. Bruk gjerne ryddig struktur med mapper, databasene kan
+		eksporteres.</li>
+		<li>Bla ut av Master Database, og finn kopien din.</li>
+		Nå kan du høyreklikke og bruke Edit. Dette er veldig nyttig for større prosjekt, som bruker mye av
+		samme footprint. Skal du gjøre en endring på alle komponenter av én type, trenger du bare endre én
+		gang.</li>
+	</ol>
+	<p id="egnefootprints"><h3>Lage egne footprints</h3></p>
+	<ol>
+		<li>Åpne Ultiboard og start et nytt prosjekt (dersom det ikke er et åpent)
+		<li>Gå til Tools > Part Wizard…
+		<li>Steg 1 avgjør om du bruker hullmonterte komponenter eller SMD
+		<li>Steg 2 er hjelpsomt for typiske komponenter som motstander, dioder, IC-er osv. Vi kommer
+		hovedsaklig til å bruke SIP, DIP, ZIG og et par andre under EKG-prosjektet
+		<li>Steg 3 omhandler kun utseendet på Silkscreen-laget. Dette er teksten som skrives på kortet.
+		<li>dette steget til slutt, da komponentet kanskje ikke har riktig størrelse enda
+		<li>Steg 4 er 3D-modell-info. Dette behøver vi ikke nå, hopp over.
+		<li>Steg 5 bestemmer størrelse på hull og pad, eller bare pad hvis det er SMD.
+		<li>Steg 6 er det viktigste steget. Hvis komponenten er av det normale slaget, skal det holde å
+		skrive inn disse parametrene fra datablad.
+		<li>Steg 7 er nummerering. Denne er automatisk riktig, med mindre du holder på med noe
+		spesielt.
+		<li>Gjør ferdig “Part Wizard”. Nå kan du redigere footprintet om du ønsker.
+		<li>Trykk CTRL+S for å lagre. Her er det fint å bruke navn på pakken. F.eks “DIP-8, THT”, “C0805”
+	</ol>
+
+
+	<p id="egnesymbol"><h3>Lage symbol i Multisim</h3></p>
+	<ol>
+		<li>Åpne Multisim og start et nytt prosjekt (dersom det ikke er et åpent)</li>
+		<li>Gå til Tools > Component Wizard…</li>
+		<li>Steg 1:</li>
+		<ol>
+			<li>Skriv inn navn på symbol. Her er det fint å bruke komponentnavn. F.eks LM555.
+			Grunnen til dette er at forskjellige symboler i Multisim kan ha samme footprint i
+			Ultiboard.</li>
+			<li>Velg Layout Only (footprint).</li>
+		</ol>
+			<li>Steg 2:</li>
+		<ol>
+			<li>Klikk Select a footprint, velg User Database og finn fotavtrykket til symbolet du skal
+			lage</li>
+			<li>Fyll inn antall pinner</li>
+		</ol>
+			<li>Steg 3:</li>
+		<ol>
+			<li>Her kan du velge å tegne symbol selv og flytte rundt på hvor pinnene er, eller prøve å
+			lete etter et liknende symbol i databasen. Symbolet til LM555 øverst i dette
+			dokumentet er laget i dette tegneprogrammet.</li>
+		</ol>
+			<li>Steg 4: Hopp over</li>
+			<li>Steg 5:</li>
+		<ol>
+			<li>Klikk Map pins</li>
+			<li>Klikk Auto-assign</li>
+			<li>Navngi pinnene dersom ønskelig (Symbol pin name). Dette er det som vises på
+			symbolet i kretsskjema.</li>
+		</ol>
+			<li>Steg 6:</li>
+		<ol>
+			<li>Opprett mappe for symbolet og lagre</li>
+		</ol>
+	</ol>
+	<p id="tipsultiboard"><h3>Generelle tips til Ultiboard</h3></p>
+	<ol>
+		<li>Bruk “Enable Select-raden” aktivt. Disse gjør det mye lettere å jobbe effektivt. Å flytte små
+		SMD-motstander kan være forferdelig hvis man har lov å markere pads. De får man ikke flytte
+		på.</li>
+		<img src="content/selector.png">
+		<li>Bli kjent med PCB Properties. Dette finner du under Options > PCB Properties. Det første du
+		ønsker å gjøre i et prosjekt er å stille inn dette. Obs! Her må du være i et PCB-prosjekt, ikke en
+		“part”.
+	</ol>
+	<p><h5>Grids & Units</h5></p>
+	<ol>
+		<li>Units bestemmer enheten for dette vinduet
+		<li>Merk forskjellen mellom visible grid og part grid, copper grid, via grid og SMD grid.
+		Disse må ofte varieres mye gjennom arbeidsprosessen for å få et godt resultat
+	</ol>
+	<p><h5>Design Rules</h5></p>
+	<ol>
+		<li>Trace Width bør stilles inn til ønsket bredde. Denne resetter seg til dette tallet hele
+		tiden, og er greit å stille inn her.
+		<li>Clearance Settings er grei å vite om, dersom du kjenner nøyaktigheten på fresen du
+		skal bruke.
+		<li>Dra til Global options under Options > Global options > Dimensions og sett
+		standardenheten for prosjeket
+	</ol>
+`;

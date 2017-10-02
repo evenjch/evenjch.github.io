@@ -1,0 +1,87 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="content/forprosjekt555_list.txt"></script>
+		<script src="content/prosjektspesifikasjon_list.txt"></script>
+		<script src="content/forprosjekt555.txt"></script>
+		<script src="content/prosjektspesifikasjon.txt"></script>
+		<script src="content/startside.txt"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="styles.css"/>
+	</head>
+<!doctype html>
+<title>Example</title>
+<body>
+	<nav class="col-1">
+	
+	
+		<button class="accordion">Anvendt Elektronikk</button>
+		<div class="items">
+			<p id="forprosjekt555_link">Forprosjekt - Astabil 555-timer</p>
+			<p id="prosjektbeskrivelse_link">EKG - Prosjektspesifikasjoner</p>
+		</div>
+		
+		<button class="accordion">Arduino</button>
+		<div class="items">
+			<p id="">1</p>
+			<p id="">2</p>
+		</div>
+
+		<button class="accordion">Avanserte Sensorsystemer</button>
+		<div class="items">
+			<p>Forprosjekt - Astabil 555-timer</p>
+			<p>EKG - Prosjektspesifikasjoner</p>
+		</div>
+	</nav>
+	<div class="col-2">
+		<header>
+		</header>
+		<main class="content">
+			<article>
+				<div id="log">
+				<p> <h2>IEStrumentation Wiki</h2></p>
+				<p>Midlertidige greier</p>
+				</div>
+			</article>
+			<aside>
+				<div id="listofcontent">
+
+				</div>
+			</aside>
+		</main>
+		<footer>Footer</footer>
+	</div>
+  
+  <script charset="UTF-8">
+	console.log(forprosjekt555);
+
+	//document.querySelector('#logo_link').addEventListener('click', function() {displayContent(startside)});
+	document.querySelector('#forprosjekt555_link').addEventListener('click', function() {displayContent(forprosjekt555, forprosjekt555_list)});
+	document.querySelector('#prosjektbeskrivelse_link').addEventListener('click', function() {displayContent(prosjektspesifikasjon, prosjektspesifikasjon_list)});
+	
+	function displayContent(content, listOfContent) {
+		document.querySelector('#log').innerHTML = content;
+		document.querySelector('#listofcontent').innerHTML = listOfContent;
+	}
+  
+  
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+  </body>
+</html>

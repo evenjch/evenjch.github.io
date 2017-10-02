@@ -1,0 +1,44 @@
+let prosjektspesifikasjon = `
+<p> <h2 style="color:#CCCCCC">Prosjektkrav til EKG målesystem</h2></p>
+<p> Prosjektet har følgende arbeidspakker:</p>
+<ol>
+<li>Simulering av EKG-kretsen.</li>
+<li>Design av kretskortutlegget</li>
+<li>Kretskortproduksjon og gjennomtesting</li>
+<li>Sammenligning mellom simulasjoner og reelle kretsen</li>
+<li>Tester med NI Biomedical toolkit</li>
+<li>Utvikling av LabVIEW loggeprogram</li>
+<li>Målinger av EKG signaler</li>
+<li>Presentasjon</li>
+</ol>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+`;
