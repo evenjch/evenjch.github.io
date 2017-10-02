@@ -98,7 +98,8 @@ div.items {
     background-color: white;
 }
 
-.items > p {    
+.items > p {
+	cursor: pointer;
 	color: #606060;
 	padding: 5 0 0 20;
 	margin:0;
