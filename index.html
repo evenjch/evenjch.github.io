@@ -100,12 +100,14 @@
 	};
 	//Apply styles for mobile version
 	if (isMobile.iOS() || isMobile.Android() || isMobile.BlackBerry() || isMobile.Opera()) {
-		document.querySelector('#navHolder').className = 'navHolder collapse';
+			document.querySelector('#navHolder').className = 'navHolder navRemove';
 		document.querySelector('#nav').className += ' mobileNav';
+			document.querySelector('#mainContent').className = 'content contentWidthFix';
 	}
 	//Apply styles for PC version
 	else {
 		document.querySelector('#navHolder').className = "navHolder";
+			document.querySelector('#mainContent').className = 'content';
 	}
 	
 	
