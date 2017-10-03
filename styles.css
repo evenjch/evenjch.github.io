@@ -64,9 +64,7 @@ nav {
 	min-width:20vw;
 }
 
-#log {
-	width:45vw;
-}
+
 
 .logo > img {
 	overflow: hidden;
@@ -115,6 +113,18 @@ div.items {
 #collapse-btn {
 	position:absolute; 
 	cursor: pointer;
+}
+
+#navHolder {
+	
+}
+
+.contentWidthFix {
+	min-width: 100vw;
+}
+
+.navRemove{
+	width:0;
 }
 
 .mobileNav{

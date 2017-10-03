@@ -41,16 +41,16 @@
 	<div class="col-2">
 		<header>
 		</header>
-		<main class="content">
-			<article>
+		<main id="mainContent" class="content">
+			<article>	
 				<div id="log">
 				<p> <h2>IEStrumentation Wiki</h2></p>
 				<p>Midlertidige greier</p>
-<i class="fa fa-camera-retro fa-lg"></i> fa-lg
-<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-<i class="fa fa-camera-retro fa-5x"></i> fa-5x
+				<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+				<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+				<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+				<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+				<i class="fa fa-camera-retro fa-5x"></i> fa-5x
 	<i class="icon-collapse"></i> 
 				</div>
 			</article>
@@ -106,17 +106,18 @@
 	//Apply styles for PC version
 	else {
 		document.querySelector('#navHolder').className = "navHolder";
-		document.querySelector('#nav').className += ' PCNav';
 	}
 	
 	
 	function switchNavMode() {
 		if (document.querySelector('#navHolder').className == 'navHolder') {
-			document.querySelector('#navHolder').className = 'navHolder collapse';
+			document.querySelector('#navHolder').className = 'navHolder navRemove';
+			document.querySelector('#mainContent').className = 'content contentWidthFix';
 			console.log('tes1t');
 		}
 		else {
 			document.querySelector('#navHolder').className = 'navHolder';
+			document.querySelector('#mainContent').className = 'content';
 			console.log('test');
 		}
 	}
