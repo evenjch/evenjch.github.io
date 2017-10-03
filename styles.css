@@ -64,7 +64,9 @@ nav {
 	min-width:20vw;
 }
 
-
+#log {
+	width:45vw;
+}
 
 .logo > img {
 	overflow: hidden;
@@ -85,10 +87,12 @@ button.accordion {
     outline: none;
     font-size: 16px;
     transition: 0.4s;
+	margin:0;
 }
 
 button.accordion.active, button.accordion:hover {
     background-color: white; 
+	margin:0;
 }
 
 
@@ -128,8 +132,8 @@ div.items {
 }
 
 .mobileNav{
-	max-width:25vw;
-	min-width:25vw;	
+	max-width:35vw;
+	min-width:35vw;	
 }
 .PCNav{
 	
