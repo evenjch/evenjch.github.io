@@ -33,6 +33,7 @@ h1,h2,h3, h4, h5 {
 	flex: 4;
 	min-height: 84vh;
 	padding:0;
+	padding-left: 20px;
 }
 .content > aside {
 	background: white;
@@ -98,11 +99,30 @@ div.items {
     background-color: white;
 }
 
+.icon-collapse {
+	position:absolute !important;
+	font-size:2em;
+	padding:0.25em;
+}
+
 .items > p {
 	cursor: pointer;
 	color: #606060;
 	padding: 5 0 0 20;
 	margin:0;
+}
+
+#collapse-btn {
+	position:absolute; 
+	cursor: pointer;
+}
+
+.mobileNav{
+	max-width:25vw;
+	min-width:25vw;	
+}
+.PCNav{
+	
 }
 
 .tg  {border-collapse:collapse;border-spacing:0;border:none;}

@@ -2,21 +2,22 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<script src="content/forprosjekt555_list.txt"></script>
-		<script src="content/prosjektspesifikasjon_list.txt"></script>
-		<script src="content/forprosjekt555.txt"></script>
-		<script src="content/prosjektspesifikasjon.txt"></script>
-		<script src="content/startside.txt"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="styles.css"/>
+
+		
+		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+
+		<link href="styles.css" rel="stylesheet">
 	</head>
 <!doctype html>
 <title>Example</title>
 <body>
-	<nav class="col-1">
+
+	<i class="icon-collapse"></i> 
 	
+	<p id="collapse-btn">Collapse</p>
+	<div id="navHolder">
+	<nav id="nav" class="col-1">
+		
 	
 		<button class="accordion">Avanserte Sensorsystemer</button>
 		<div class="items">
@@ -36,6 +37,7 @@
 			<p>EKG - Prosjektspesifikasjoner</p>
 		</div>
 	</nav>
+	</div>
 	<div class="col-2">
 		<header>
 		</header>
@@ -44,6 +46,12 @@
 				<div id="log">
 				<p> <h2>IEStrumentation Wiki</h2></p>
 				<p>Midlertidige greier</p>
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x
+	<i class="icon-collapse"></i> 
 				</div>
 			</article>
 			<aside>
@@ -55,18 +63,79 @@
 		<footer>Footer</footer>
 	</div>
   
+	<script src="browserCheck.js"></script>
 	<script charset="UTF-8">
-	console.log(forprosjekt555);
-
+		
+		
 	//document.querySelector('#logo_link').addEventListener('click', function() {displayContent(startside)});
+	document.querySelector('#collapse-btn').addEventListener('click', function() {switchNavMode()});
 	document.querySelector('#forprosjekt555_link').addEventListener('click', function() {displayContent(forprosjekt555, forprosjekt555_list)});
 	document.querySelector('#prosjektbeskrivelse_link').addEventListener('click', function() {displayContent(prosjektspesifikasjon, prosjektspesifikasjon_list)});
 
 	function displayContent(content, listOfContent) {
+		console.log('heu');
 		document.querySelector('#log').innerHTML = content;
 		document.querySelector('#listofcontent').innerHTML = listOfContent;
 	}
-
+	//Check users device
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+	//Apply styles for mobile version
+	if (isMobile.iOS() || isMobile.Android() || isMobile.BlackBerry() || isMobile.Opera()) {
+		document.querySelector('#navHolder').className = 'navHolder collapse';
+		document.querySelector('#nav').className += ' mobileNav';
+	}
+	//Apply styles for PC version
+	else {
+		document.querySelector('#navHolder').className = "navHolder";
+		document.querySelector('#nav').className += ' PCNav';
+	}
+	
+	
+	function switchNavMode() {
+		if (document.querySelector('#navHolder').className == 'navHolder') {
+			document.querySelector('#navHolder').className = 'navHolder collapse';
+			console.log('tes1t');
+		}
+		else {
+			document.querySelector('#navHolder').className = 'navHolder';
+			console.log('test');
+		}
+	}
+	
+	/*		
+	 *		Function for testing navbar
+	 * 		collapse for mobile use
+		
+	function test(tall) {
+		console.log(tall);
+		if(tall == 1) {
+			document.querySelector('#nav').className += ' collapse';
+		}
+		else {
+			document.querySelector('#nav').className = 'col-1';
+		}
+		
+	}
+	 */
 
 	var acc = document.getElementsByClassName("accordion");
 	var i;
@@ -83,5 +152,13 @@
 		}
 	}
 </script>
+<script src="content/forprosjekt555_list.txt"></script>
+		<script src="content/prosjektspesifikasjon_list.txt"></script>
+		<script src="content/forprosjekt555.txt"></script>
+		<script src="content/prosjektspesifikasjon.txt"></script>
+		<script src="content/startside.txt"></script>
+		<script href="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>

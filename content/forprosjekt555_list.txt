@@ -5,5 +5,3 @@ let forprosjekt555_list = `
 	<p><a href="#egnesymbol">Lage egne symbol</a></p>
 	<p><a href="#tipsultiboard">Generelle tips til Ultiboard</a></p>
 `;
-
-kopiering_av_eksisterende
