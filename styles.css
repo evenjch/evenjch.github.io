@@ -36,6 +36,8 @@ h1,h2,h3, h4, h5 {
 	padding-left: 20px;
 }
 .content > aside {
+	position:fixed;
+	right:0;
 	background: white;
 	border: solid 1px;
 	flex: 1;
@@ -43,17 +45,15 @@ h1,h2,h3, h4, h5 {
 	min-width: 20vw;
 	max-height: 500px;
 }
-header {
-	background: white;
-	height: 6vh;
-	width: 75vw;
-}
-footer {
+
+
+
+footer, header {
 	background: white;
 	height: 6vh;
 	max-height: 6vh;
 	min-height: 6vh;
-	width: 75vw;
+	width: 65vw;
 	padding:0;
 }
 header, footer, article, nav, aside {
@@ -64,9 +64,7 @@ nav {
 	min-width:20vw;
 }
 
-#log {
-	width:45vw;
-}
+
 
 .logo > img {
 	overflow: hidden;
@@ -118,29 +116,73 @@ div.items {
 	position:absolute; 
 	cursor: pointer;
 }
-
 #navHolder {
-	
+}
+.navRemove{
+	width:0;
+}
+/*
+.MobileContentWidthFix > article {
+	min-width: 85vw;
+}
+.contentWidthFix {
+	min-width: 95vw;
+}
+.logWidth{
+	width:58vw;
+}
+.logWidthFix {
+	width: 78vw;
 }
 
-.contentWidthFix {
-	min-width: 100vw;
+.col-1WidthFix {
+	max-width:75vw;
 }
 
 .navRemove{
 	width:0;
 }
-
-.mobileNav{
-	max-width:35vw;
-	min-width:35vw;	
+.mobileLogWidth {
+	width: 50vw;
 }
+.mobileNav{
+	max-width:30vw;
+	min-width:30vw;	
+}
+*/
+/* MOBILE SHIT */
+
+@media screen and (max-width: 1300px){
+	nav {
+		max-width:30vw;
+		min-width:30vw;
+	}
+	.content > article {
+		max-width:50vw;
+		min-width:50vw;	
+	}
+	.contentWidthFix {
+		min-width: 80vw !important;
+	}
+	footer, header {
+		background: white;
+		height: 6vh;
+		max-height: 6vh;
+		min-height: 6vh;
+		width: 70vw;
+		padding:0;
+	}
+	.navRemove{
+		width:0;
+	}
+}
+
 .PCNav{
 	
 }
 
 .tg  {border-collapse:collapse;border-spacing:0;border:none;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg th{text-align: left !important; font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
 .tg .tg-9hbo{font-weight:bold;vertical-align:top}
 .tg .tg-yw4l{vertical-align:top}

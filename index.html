@@ -42,8 +42,8 @@
 		<header>
 		</header>
 		<main id="mainContent" class="content">
-			<article>	
-				<div id="log">
+			<article id="article">	
+				<div id="log" class="logWidth">
 				<p> <h2>IEStrumentation Wiki</h2></p>
 				<p>Midlertidige greier</p>
 				<i class="fa fa-camera-retro fa-lg"></i> fa-lg
@@ -101,13 +101,15 @@
 	//Apply styles for mobile version
 	if (isMobile.iOS() || isMobile.Android() || isMobile.BlackBerry() || isMobile.Opera()) {
 			document.querySelector('#navHolder').className = 'navHolder navRemove';
-		document.querySelector('#nav').className += ' mobileNav';
+			document.querySelector('#nav').className += ' mobileNav';
 			document.querySelector('#mainContent').className = 'content contentWidthFix';
+			document.querySelector('#log').className = 'logWidthFix';
 	}
 	//Apply styles for PC version
 	else {
 		document.querySelector('#navHolder').className = "navHolder";
-			document.querySelector('#mainContent').className = 'content';
+		document.querySelector('#mainContent').className = 'content';
+		document.querySelector('#log').className = 'logWidth';
 	}
 	
 	
@@ -115,12 +117,13 @@
 		if (document.querySelector('#navHolder').className == 'navHolder') {
 			document.querySelector('#navHolder').className = 'navHolder navRemove';
 			document.querySelector('#mainContent').className = 'content contentWidthFix';
-			console.log('tes1t');
+			document.querySelector('#article').className = 'contentWidthFix';
+
 		}
 		else {
 			document.querySelector('#navHolder').className = 'navHolder';
-			document.querySelector('#mainContent').className = 'content';
-			console.log('test');
+			document.querySelector('#mainContent').className = 'content';	
+		
 		}
 	}
 	
