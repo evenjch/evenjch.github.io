@@ -4,7 +4,7 @@
 	Ultiboard, ofte omtalt som NI Circuit Design Suite. Studenten skal i løpet av forprosjektet gjennom
 	alle nødvendige steg for produksjon av kretskort. Dette gjør vi for å kunne realisere EKG-kretsen med
 	mer selvsikkerhet i arbeidsflyten.</p>
-	<img src="content/astabil555.PNG">
+	<img src="content/astabil555.png">
 	<ol>
 		<li>Lage footprints i Ultiboard</li>
 		<li>Lage nødvendige symboler i Multisim (LM555 og HDR, 1X2 pinheaderen)</li>
