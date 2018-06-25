@@ -1,0 +1,56 @@
+﻿let ekg_prosjektspesifikasjon = `
+<p> <h3>Prosjektkrav til EKG målesystem</h3></p>
+<p> Prosjektet har følgende arbeidspakker:</p>
+<ol>
+<li>Simulering av EKG-kretsen.</li>
+<li>Design av kretskortutlegget</li>
+<li>Kretskortproduksjon og gjennomtesting</li>
+<li>Sammenligning mellom simulasjoner og reelle kretsen</li>
+<li>Tester med NI Biomedical toolkit</li>
+<li>Utvikling av LabVIEW loggeprogram</li>
+<li>Målinger av EKG signaler</li>
+<li>Presentasjon</li>
+</ol>
+
+<p><b>
+Sluttresultatene bør inneholde sammenligning av frekvensresponser gjennom å kjøre Bode
+analyse både på modellen og produsert kretskortet og resultatene fra EKG-målinger.
+NB! Det er viktig å vise tydelige resultater og forklare eventuelle avvik (…).
+</b></p>
+
+<p id="simulering_av_ekgkrets"> <h3>Simulering av EKG-krets</h3></p>
+<p>Det kan være gunstig å simulere forsterkertrinnene hver for seg, for å enklere se hvordan hvilke komponenter bidrar. Det skal holde med to simuleringer.</p>
+<ol>
+<li>Inngangstrinn med instrumenteringsforsterker (INA126). Søk opp forenklet modell av INA126, og bygg opp denne med TL071.</li>
+<li>Forsterkertrinn med inngangsfilter (C1 & R9)</li>
+</ol>
+<p>
+Ta vare på all data som blir høstet inn. Gjerne i et ryddig Excel-dokument, slik at målinger enkelt kan sammenliknes senere. MatLAB kan importere fra Excel, og Multisim+LabView kan skrive til Excel.
+</p>
+
+
+<p id="design_av_kretskort_og_utlegg"> <h3>Design av kretskort og utlegg</h3></p>
+<ul>
+<li>Designet skal være modulært i den form av utbyttbare komponenter, der dette er relevant. Dette er særlig plasser som tilbakekoplingssløyfa til TL071 og inngangsfilteret til samme forsterker.</li>
+<li>Slik simuleringen ble gjort på PC i to deler, skal også målinger på kretskortet kunne gjøres i to deler. Dette er noe dere selv må ta høyde for. Testpunkter, med mulighet for å koble av neste del? To kort? Gjerne spør om forslag til løsning her, dersom du er usikker på mulighetene du har.</li>
+<li>Planlegg inngang for forsyningsspenninger og utgang for signal!</li>
+</ul>
+
+<p>Et par tommelfingerregler:</p>
+
+<ul>
+<li>Litt større drillhull enn diameteren på komponentbeinet. Det er ofte fint å gi tinnet mulighet til å flyte gjennom hullet, langs komponentbeinet. Dette gjelder i enda større grad gjennompletterte hull </li>
+<li>Overdriv pad-størrelser! For små pads vil veldig fort resultere i et loddepunkt dere har ett forsøk på, før kopperet faller av.</li>
+<li>Unngå 90 graders svinger så godt du kan. SPESIELT PÅ SIGNALBANE!</li>
+</ul>
+
+<p id="kretskortproduksjon_og_gjennomtesting"> <h3>Kretskortproduksjon og gjennomtesting</h3></p>
+<ul>
+<li>Før fres bør det sjekkes grundig for feil og bytting av baner. Det er utrolig lett å for eksempel bytte V+ og V- på en opamp i et utlegg.</li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>Bruk MyDAQ til å gjennomføre en frekvensrespons på hver av modulene, slik som ble gjort i simuleringsdelen av prosjektet. Her er det fint å ha like mange steg per dekade som vi hadde i Multisim, slik at jobben med å sammenlikne plot blir enklere.</p>
+
+`;

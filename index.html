@@ -5,11 +5,14 @@
 
 		
 		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-<script src="content/forprosjekt555_list.txt"></script>
-		<script src="content/prosjektspesifikasjon_list.txt"></script>
+		<script src="content/forprosjekt555_list.txt"></script>
 		<script src="content/forprosjekt555.txt"></script>
-		<script src="content/prosjektspesifikasjon.txt"></script>
-		<script src="content/startside.txt"></script>
+		<script src="content/anvendt_elektronikk/startside.txt"></script>
+		
+		
+		<script src="content/avanserte_sensorsystemer/ekg_prosjektspesifikasjon.txt"></script>
+		<script src="content/avanserte_sensorsystemer/ekg_prosjektspesifikasjon_list.txt"></script>
+		
 		<link href="styles.css" rel="stylesheet">
 	</head>
 <!doctype html>
@@ -28,14 +31,23 @@
 			<p id="prosjektbeskrivelse_link">EKG - Prosjektspesifikasjon</p>
 		</div>
 	
+	
 		<button class="accordion">Anvendt Elektronikk</button>
 		<div class="items">
 			<p>Forprosjekt - Astabil 555-timer</p>
 			<p>Arduino Uno - Prosjektspesifikasjon</p>
 		</div>
 		
+		<button class="accordion">Elektronikk</button>
+		<div class="items">
+			<p>Diode</p>
+			<p>Operasjonsforsterker</p>
+			<p>Transistor</p>
+		</div>
+	
 		<p id="spacer">--</p>
-		
+	
+	
 		<button class="accordion">Arduino</button>
 		<div class="items">
 			<p id="">IDE og mitt første program</p>
@@ -96,10 +108,9 @@
 	//document.querySelector('#logo_link').addEventListener('click', function() {displayContent(startside)});
 	document.querySelector('#collapse-btn').addEventListener('click', function() {switchNavMode()});
 	document.querySelector('#forprosjekt555_link').addEventListener('click', function() {displayContent(forprosjekt555, forprosjekt555_list)});
-	document.querySelector('#prosjektbeskrivelse_link').addEventListener('click', function() {displayContent(prosjektspesifikasjon, prosjektspesifikasjon_list)});
+	document.querySelector('#prosjektbeskrivelse_link').addEventListener('click', function() {displayContent(ekg_prosjektspesifikasjon, ekg_prosjektspesifikasjon_list)});
 
 	function displayContent(content, listOfContent) {
-		console.log('heu');
 		document.querySelector('#log').innerHTML = content;
 		document.querySelector('#listofcontent').innerHTML = listOfContent;
 	}

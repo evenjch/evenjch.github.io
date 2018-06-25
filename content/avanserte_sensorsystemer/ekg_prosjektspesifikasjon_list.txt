@@ -1,4 +1,4 @@
-let prosjektspesifikasjon_list = `
+let ekg_prosjektspesifikasjon_list = `
 	<p id="">Even yo</p>
 	<p id="">Lenke 2</p>
 	<p id="">Lenke 3</p>
