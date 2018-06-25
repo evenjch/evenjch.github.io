@@ -6,8 +6,14 @@ body {
 	flex-direction: row;
 	margin: 0;
 }
-h1,h2,h3, h4, h5 {
-	background-color; black;
+
+h5 {
+	color: black;
+	margin: 0;
+	font-weight: normal;
+}
+
+h1,h2,h3, h4 {
 	color:rgb(45,116,181);
 }
 .col-1 {
@@ -52,6 +58,11 @@ h1,h2,h3, h4, h5 {
 	bottom: 15px;
 	width:10vw;
 }
+
+#meny_item_kategory {
+	margin: 0 0 0 0 !important;
+}
+
 
 footer, header {
 	background: white;
@@ -123,6 +134,11 @@ div.items {
 }
 #navHolder {
 }
+
+#spacer {
+	margin: 10 0 0 0;
+}
+
 .navRemove{
 	width:0;
 }
