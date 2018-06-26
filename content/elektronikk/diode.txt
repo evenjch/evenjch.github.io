@@ -2,7 +2,13 @@
 
 <p id="diode"><h3>Diode</h3></p>
 <p>En diode er et ulineært kretselement, hvor Ohms lov ikke gjelder. Dioden har to tilkoplingspunkter eller terminaler (som en motstand)</p>
-<img src="content/elektronikk/diode_anode_katode.PNG">
+<ul>
+<li>Liten spenningsendring - stor strømendring</li>
+<li>Tommelfingerregel: 0.1 V per dekade strømendring</li>
+<li>F.eks: 0.6 V ved 1 A gir 0.7 V ved 10 A</li>
+</ul>
+<img src="content/elektronikk/diode_anode_katode.png">
+
 
 <p id="diode"><h3>Ideell diode</h3></p>
 <p>Den ideelle dioden er en forenklet modell av en reell diode. Under vises VI-karakteristikken og oppførselen til denne modellen.</p>
