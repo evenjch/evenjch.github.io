@@ -1,0 +1,7 @@
+﻿let opamp_innhold = `
+	<p id="">Lenke 1</p>
+	<p id="">Lenke 2</p>
+	<p id="">Lenke 3</p>
+	<p id="">Lenke 4</p>
+	<p id="">Lenke 5</p>
+`;

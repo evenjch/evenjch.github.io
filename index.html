@@ -1,17 +1,27 @@
 <html>
 
 	<head>
-		<meta charset="UTF-8">
 
+		<meta charset="UTF-8">
 		
 		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 		<script src="content/forprosjekt555_list.txt"></script>
 		<script src="content/forprosjekt555.txt"></script>
-		<script src="content/anvendt_elektronikk/startside.txt"></script>
+		<script src="content/startside.txt"></script>
 		
 		
 		<script src="content/avanserte_sensorsystemer/ekg_prosjektspesifikasjon.txt"></script>
 		<script src="content/avanserte_sensorsystemer/ekg_prosjektspesifikasjon_list.txt"></script>
+		
+		<script src="content/elektronikk/diode.txt"></script>
+		<script src="content/elektronikk/diode_innhold.txt"></script>
+		<script src="content/elektronikk/transistor.txt"></script>
+		<script src="content/elektronikk/transistor_innhold.txt"></script>
+		<script src="content/elektronikk/opamp.txt"></script>
+		<script src="content/elektronikk/opamp_innhold.txt"></script>
+		
+		<script src="content/anvendt_elektronikk/arduino_uno.txt"></script>
+		<script src="content/anvendt_elektronikk/arduino_uno_innhold.txt"></script>
 		
 		<link href="styles.css" rel="stylesheet">
 	</head>
@@ -31,20 +41,19 @@
 			<p id="prosjektbeskrivelse_link">EKG - Prosjektspesifikasjon</p>
 		</div>
 	
-	
 		<button class="accordion">Anvendt Elektronikk</button>
 		<div class="items">
 			<p>Forprosjekt - Astabil 555-timer</p>
-			<p>Arduino Uno - Prosjektspesifikasjon</p>
+			<p id="arduino_uno_link">Arduino Uno - Prosjektspesifikasjon</p>
 		</div>
 		
 		<button class="accordion">Elektronikk</button>
 		<div class="items">
-			<p>Diode</p>
-			<p>Operasjonsforsterker</p>
-			<p>Transistor</p>
+			<p id="diode_link">Diode</p>
+			<p id="opamp_link">Operasjonsforsterker</p>
+			<p id="transistor_link">Transistor</p>
 		</div>
-	
+
 		<p id="spacer">--</p>
 	
 	
@@ -80,12 +89,7 @@
 			<article id="article">	
 				<div id="log" class="logWidth">
 				<p> <h2>IEStrumentation Wiki</h2></p>
-				<p>Midlertidige greier</p>
-				<i class="fa fa-camera-retro fa-lg"></i> fa-lg
-				<i class="fa fa-camera-retro fa-2x"></i> fa-2x
-				<i class="fa fa-camera-retro fa-3x"></i> fa-3x
-				<i class="fa fa-camera-retro fa-4x"></i> fa-4x
-				<i class="fa fa-camera-retro fa-5x"></i> fa-5x
+
 	<i class="icon-collapse"></i> 
 				</div>
 			</article>
@@ -107,9 +111,21 @@
 		
 	//document.querySelector('#logo_link').addEventListener('click', function() {displayContent(startside)});
 	document.querySelector('#collapse-btn').addEventListener('click', function() {switchNavMode()});
+	
+	
 	document.querySelector('#forprosjekt555_link').addEventListener('click', function() {displayContent(forprosjekt555, forprosjekt555_list)});
+	
 	document.querySelector('#prosjektbeskrivelse_link').addEventListener('click', function() {displayContent(ekg_prosjektspesifikasjon, ekg_prosjektspesifikasjon_list)});
 
+	document.querySelector('#diode_link').addEventListener('click', function() {displayContent(diode, diode_innhold)});
+	document.querySelector('#transistor_link').addEventListener('click', function() {displayContent(transistor, transistor_innhold)});
+	document.querySelector('#opamp_link').addEventListener('click', function() {displayContent(opamp, opamp_innhold)});
+
+	document.querySelector('#forprosjekt555_link').addEventListener('click', function() {displayContent(forprosjekt555, forprosjekt555_list)});
+	
+	document.querySelector('#arduino_uno_link').addEventListener('click', function() {displayContent(arduino_uno, arduino_uno_innhold)});
+	
+	
 	function displayContent(content, listOfContent) {
 		document.querySelector('#log').innerHTML = content;
 		document.querySelector('#listofcontent').innerHTML = listOfContent;

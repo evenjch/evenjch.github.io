@@ -1,0 +1,15 @@
+﻿let diode = `
+
+<p id="diode"><h3>Diode</h3></p>
+<p>En diode er et ulineært kretselement, høvor Ohms lov ikke gjelder. Dioden har to tilkoplingspunkter eller terminaler (som en motstand)</p>
+<img src="content/elektronikk/diode_anode_katode.png">
+
+<p id="diode"><h3>Ideell diode</h3></p>
+<p>Den ideelle dioden er en forenklet modell av en reell diode. Under vises VI-karakteristikken og oppførselen til denne modellen.</p>
+<img src="content/elektronikk/diode/ideell_diode.png">
+<p id="diode"><h3>Reell diode</h3></p>
+<p>
+<img src="content/elektronikk/diode/reell_diode.png">
+<p id="diode"><h3>Ideell diode</h3></p>
+<p id="diode"><h3>Ideell diode</h3></p>
+`;

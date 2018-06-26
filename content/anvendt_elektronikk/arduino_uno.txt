@@ -1,0 +1,7 @@
+﻿let arduino_uno = `
+<p id="Astabil555krets"> <h3>Forprosjekt - Astabil 555-krets </h3></p>
+<p>øøøøø</p>
+`;
+
+
+

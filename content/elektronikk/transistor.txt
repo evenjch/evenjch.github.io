@@ -1,0 +1,10 @@
+﻿let transistor = `
+
+<p id="transistor"><h3>Transistor</h3></p>
+<p>En diode er et ulineært kretselement, hvor Ohms lov ikke gjelder. Dioden har to tilkoplingspunkter eller terminaler (som en motstand)</p>
+<img src="content/elektronikk/diode_anode_katode.png">
+
+
+
+
+`;
